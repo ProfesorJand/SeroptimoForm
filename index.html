@@ -146,8 +146,6 @@
     </script>
       <style>
 
-        canvas { border: 1px solid black; }
-
         .ContainerGraficos{
           display: flex;
           flex-direction: row;
@@ -177,6 +175,16 @@
           flex:50%;
           align-items: center;
           justify-content: center;
+        }
+
+        @media (max-width: 720px) {
+          .ContainerGraficos{
+            flex-direction: column;
+          }
+          .BoxGraficosArea{
+            flex:100%;
+            height: auto;
+          }
         }
         
       </style>
@@ -796,20 +804,20 @@
 
       <div class="ContainerGraficos">
         <div class="BoxGraficosTotales">
-          <canvas id="graficoTotal"></canvas>
+          <canvas id="graficoTotal" hidden></canvas>
         </div>
         <div class="ContainerGraficosArea">
           <div class="BoxGraficosArea">
-            <canvas id="graficoFisica"></canvas>
+            <canvas id="graficoFisica" hidden;></canvas>
           </div>
           <div class="BoxGraficosArea">
-            <canvas id="graficoAmbiente"></canvas>
+            <canvas id="graficoAmbiente" hidden></canvas>
           </div>
           <div class="BoxGraficosArea">
-            <canvas id="graficoMental"></canvas>
+            <canvas id="graficoMental" hidden></canvas>
           </div>
           <div class="BoxGraficosArea">
-            <canvas id="graficoEmocional"></canvas>
+            <canvas id="graficoEmocional" hidden></canvas>
           </div>
         </div>
       </div>
