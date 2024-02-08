@@ -23,6 +23,13 @@ a:link {
     color: blue;
   }
 
+  .hide{
+    display: none;
+  }
+  .show{
+    display: block;
+  }
+
   fieldset{
     border-color: #0420bb;
     margin-bottom: 20px;
