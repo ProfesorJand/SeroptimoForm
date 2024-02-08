@@ -8,7 +8,7 @@
     <script>
       const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:null};
       function enviar(e){
-        e.preventDefault();    
+        e.preventDefault();
         let v = {total:0, fisica:0, ambiente:0, mental:0,emocional:0};
         let p = {total:0, fisica:0, ambiente:0, mental:0,emocional:0};
         let k = {total:0, fisica:0, ambiente:0, mental:0,emocional:0};
@@ -39,6 +39,34 @@
             k.mental = k.mental + (mental.includes(i) ? 1 : 0);
             k.emocional = k.emocional + (emocional.includes(i) ? 1 : 0);
           };
+        }
+        if(v.total >= 9 && p.total >= 9 && k.total >= 9){
+          // tridosha
+          console.log("Tridosha")
+        }
+        else if(v.total >= 15 && p.total >= 12 ||  p.total >= 15 && v.total >= 12){
+          // Vata - Pitta
+          console.log("Vata - Pitta")
+        }
+        else if(v.total >= 15 && k.total >= 12 ||  k.total >= 15 && v.total >= 12){
+          // Vata - Kapha
+          console.log("Vata - Kapha")
+        }
+        else if(p.total >= 15 && k.total >= 12 ||  k.total >= 15 && p.total >= 12){
+          // Pitta - Kapha
+          console.log("Pitta - Kapha")
+        }
+        else if(v.total > p.total && v.total > k.total){
+          //Vata
+          console.log("Vata")
+        }
+        else if(p.total > v.total && p.total > k.total){
+          //Pitta
+          console.log("Pitta")
+        }
+        else{
+          //Kapha
+          console.log("Kapha")
         }
         console.log(v,p,k);
         alert("Vata: "+ v.total +", Pitta: "+ p.total + ", Kapha: "+ k.total);
@@ -145,7 +173,52 @@
       }
     </script>
       <style>
+        form{
+          background-color: #130358;
+          color:white;
+        }
+        fieldset{
+          border-color: #0420bb;
+          margin-bottom: 20px;
+        }
 
+        input[type='radio']:after {
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          background-color: #d1d3d1;
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 2px solid white;
+        }
+
+        input[type='radio']:checked:after {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #3fff05;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+
+        input[type='radio']:checked + label{
+          color: green
+        }
+        fieldset.borderBlanco {
+          border-color: #e0e0e0;
+        }
+        legend{
+          font-weight: bold;
+        }
         .ContainerGraficos{
           display: flex;
           flex-direction: row;
@@ -190,15 +263,15 @@
       </style>
 </head>
 <body>
-    <form id="form" onsubmit="enviar(event)" action="javascript:void(0);">
-        <fieldset>
+    <form id="form" onsubmit="enviar(event)" action="https://drive.google.com/file/d/133cBQGD6YMnrCU7kDkQVdpGIoNj15fTM/view?usp=sharing" method="POST">
+        <fieldset class="borderBlanco">
             <legend>Datos Personales:</legend>
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" placeholder="VUAAAMO" required><br><br>
             <label for="correo">Correo</label><br>
             <input type="email" id="correo" name="correo" placeholder="example@gmail.com" required><br>
         </fieldset>
-        <fieldset>
+        <fieldset class="borderBlanco">
             <legend>Area</legend>
             <fieldset>
                 <legend>1. Constitución física:</legend>
