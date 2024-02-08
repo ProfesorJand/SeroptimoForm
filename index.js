@@ -1,6 +1,7 @@
 const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:null};
       function enviar(e){
         const urlBase = "https://guiadeparche.com/ser-optimo/";
+        const nombre = document.getElementById("nombre").value;
         e.preventDefault();
         let v = {total:0, fisica:0, ambiente:0, mental:0,emocional:0};
         let p = {total:0, fisica:0, ambiente:0, mental:0,emocional:0};
@@ -33,39 +34,70 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
             k.emocional = k.emocional + (emocional.includes(i) ? 1 : 0);
           };
         }
+        const elementoParrafoResultado = document.getElementById("parrafoResultado");
+        let textoParrafoResultado
         if(v.total >= 9 && p.total >= 9 && k.total >= 9){
-          // tridosha
-          console.log("Tridosha")
-          window.open(urlBase + "Tridosha_Inicial.pdf")
+            // tridosha
+            console.log("Tridosha")
+            resultadoDosha = "Tridosha";
+            urlPaypalDosha = "URLTRIDOSHA"
+            textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+            elementoParrafoResultado.innerHTML = textoParrafoResultado;
+          window.open(urlBase + "Tridosha_Inicial.pdf",'_blank','noopener')
         }
         else if(v.total >= 15 && p.total >= 12 ||  p.total >= 15 && v.total >= 12){
           // Vata - Pitta
           console.log("Vata - Pitta")
-          window.open(urlBase + "Vata_Pitta_Inicial.pdf")
+          resultadoDosha = "Vata - Pitta";
+          urlPaypalDosha = "URL Vata - Pitta";
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          elementoParrafoResultado.innerHTML = textoParrafoResultado;
+          window.open(urlBase + "Vata_Pitta_Inicial.pdf",'_blank','noopener')
         }
         else if(v.total >= 15 && k.total >= 12 ||  k.total >= 15 && v.total >= 12){
           // Vata - Kapha
           console.log("Vata - Kapha")
-          window.open(urlBase + "Vata_Kapha_Inicial.pdf")
+          resultadoDosha = "Vata - Kapha";
+          urlPaypalDosha = "URL Vata - Kapha";
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          elementoParrafoResultado.innerHTML = textoParrafoResultado;
+          window.open(urlBase + "Vata_Kapha_Inicial.pdf",'_blank','noopener')
         }
         else if(p.total >= 15 && k.total >= 12 ||  k.total >= 15 && p.total >= 12){
           // Pitta - Kapha
           console.log("Pitta - Kapha")
-          window.open(urlBase + "Pitta_Kapha_Inicial.pdf")
+          resultadoDosha = "Pitta - Kapha";
+          urlPaypalDosha = "URL Pitta - Kapha";
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          elementoParrafoResultado.innerHTML = textoParrafoResultado;
+          window.open(urlBase + "Pitta_Kapha_Inicial.pdf",'_blank','noopener')
         }
         else if(v.total > p.total && v.total > k.total){
           //Vata
           console.log("Vata")
-          window.open(urlBase + "Vata_Inicial.pdf")
+          resultadoDosha = "Vata";
+          urlPaypalDosha = "URL Vata";
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          elementoParrafoResultado.innerHTML = textoParrafoResultado;
+          window.open(urlBase + "Vata_Inicial.pdf",'_blank','noopener')
         }
         else if(p.total > v.total && p.total > k.total){
           //Pitta
           console.log("Pitta")
-          window.open(urlBase + "Pitta_Inicial.pdf")
+          resultadoDosha = "Pitta";
+          urlPaypalDosha = "URL Pitta";
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          elementoParrafoResultado.innerHTML = textoParrafoResultado;
+          window.open(urlBase + "Pitta_Inicial.pdf",'_blank','noopener')
         }
         else{
           //Kapha
-          window.open(urlBase + "Kapha_Inicial.pdf")
+          console.log("Kapha")
+          resultadoDosha = "Kapha";
+          urlPaypalDosha = "URL Kapha";
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          elementoParrafoResultado.innerHTML = textoParrafoResultado;
+          window.open(urlBase + "Kapha_Inicial.pdf",'_blank','noopener')
         }
         console.log(v,p,k);
         alert("Vata: "+ v.total +", Pitta: "+ p.total + ", Kapha: "+ k.total);

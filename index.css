@@ -2,9 +2,26 @@ body{
     background-color: #130358;
     margin: 20px 0px;
     color:#e0e0e0;
-
-
 }
+
+a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
 
   fieldset{
     border-color: #0420bb;
