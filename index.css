@@ -1,0 +1,91 @@
+body{
+    background-color: #130358;
+    margin: 20px 0px;
+    color:#e0e0e0;
+
+
+}
+
+  fieldset{
+    border-color: #0420bb;
+    margin-bottom: 20px;
+  }
+
+  input[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+
+  input[type='radio']:checked:after {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      top: -2px;
+      left: -1px;
+      position: relative;
+      background-color: #3fff05;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid white;
+  }
+
+  input[type='radio']:checked + label{
+    color: green
+  }
+  fieldset.borderBlanco {
+    border-color: #e0e0e0;
+  }
+  legend{
+    font-weight: bold;
+  }
+  .ContainerGraficos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+  .BoxGraficosTotales{
+    display: flex;
+    width: 50%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ContainerGraficosArea{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .BoxGraficosArea{
+    display: flex;
+    width: 50%;
+    height: auto;
+    flex:50%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 720px) {
+    .ContainerGraficos{
+      flex-direction: column;
+    }
+    .BoxGraficosArea{
+      flex:100%;
+      height: auto;
+    }
+  }
+  
