@@ -41,7 +41,7 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
             resultadoDosha = "Tridosha";
             urlPaypalDosha = "URLTRIDOSHA";
             urlGratisDosha = urlBase + "Tridosha_Inicial.pdf",'_blank','noopener';
-            textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+            textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
             elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
@@ -50,7 +50,7 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Vata - Pitta";
           urlPaypalDosha = "URL Vata - Pitta";
           urlGratisDosha = urlBase + "Vata_Pitta_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
           elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
@@ -59,7 +59,7 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Vata - Kapha";
           urlPaypalDosha = "URL Vata - Kapha";
           urlGratisDosha = urlBase + "Vata_Kapha_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
           elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
@@ -68,7 +68,7 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Pitta - Kapha";
           urlPaypalDosha = "URL Pitta - Kapha";
           urlGratisDosha = urlBase + "Pitta_Kapha_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
           elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
@@ -77,7 +77,7 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Vata";
           urlPaypalDosha = "URL Vata";
           urlGratisDosha = urlBase + "Vata_Inicial.pdf",'_blank','noopener'
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
           elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
@@ -86,7 +86,7 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Pitta";
           urlPaypalDosha = "URL Pitta";
           urlGratisDosha = urlBase + "Pitta_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
           elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
@@ -95,7 +95,7 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Kapha";
           urlPaypalDosha = "URL Kapha";
           urlGratisDosha = urlBase + "Kapha_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle sobre inicial de tu Constitución Dosha si deseas un Detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
           elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
