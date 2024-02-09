@@ -114,18 +114,18 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
         objectPDF.data = urlGratisDosha;
         const anchorDoshaGratis = document.getElementById("anchorDoshaGratis");
         anchorDoshaGratis.href = urlGratisDosha
-        draw({v, p, k});
+        draw({v, p, k},resultadoDosha);
         
       }
 
       
-      function draw({v,p,k}) {
+      function draw({v,p,k},resultadoDosha) {
         var ctxT = document.getElementById("graficoTotal");
         var ctxF = document.getElementById("graficoFisica");
         var ctxA = document.getElementById("graficoAmbiente");
         var ctxM = document.getElementById("graficoMental");
         var ctxE = document.getElementById("graficoEmocional");
-        const dataTotal = [{label:"Total", data: [v.total,p.total,k.total],borderColor: 'rgba(255,0,0,0.5)',
+        const dataTotal = [{label:"Total - "+resultadoDosha, data: [v.total,p.total,k.total],borderColor: 'rgba(255,0,0,0.5)',
         backgroundColor: 'rgba(255,0,0,0.5)'}];
         const dataFisica = [{label:"Fisica", data: [v.fisica,p.fisica,k.fisica],borderColor: 'rgba(255,0,0,0.5)',
         backgroundColor: 'rgba(255,0,0,0.5)'}];
