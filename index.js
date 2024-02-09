@@ -124,16 +124,16 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
         var ctxA = document.getElementById("graficoAmbiente");
         var ctxM = document.getElementById("graficoMental");
         var ctxE = document.getElementById("graficoEmocional");
-        const dataTotal = [{label:"Total - "+resultadoDosha, data: [v.total,p.total,k.total],borderColor: 'rgba(255,0,0,0.5)',
-        backgroundColor: 'rgba(255,0,0,0.5)'}];
-        const dataFisica = [{label:"Fisica", data: [v.fisica,p.fisica,k.fisica],borderColor: 'rgba(255,0,0,0.5)',
-        backgroundColor: 'rgba(255,0,0,0.5)'}];
-        const dataAmbiente = [{label:"Ambiente", data: [v.ambiente,p.ambiente,k.ambiente],borderColor: 'rgba(255,0,0,0.5)',
-        backgroundColor: 'rgba(255,0,0,0.5)'}];
-        const dataMental = [{label:"Mental", data: [v.mental,p.mental,k.mental],borderColor: 'rgba(255,0,0,0.5)',
-        backgroundColor: 'rgba(255,0,0,0.5)'}];
-        const dataEmocional = [{label:"Emocional", data: [v.emocional,p.emocional,k.emocional],borderColor: 'rgba(255,0,0,0.5)',
-        backgroundColor: 'rgba(255,0,0,0.5)'}];
+        const dataTotal = [{label:"Total - "+resultadoDosha, data: [v.total,p.total,k.total],borderColor: 'rgba(224,85,235,0.5)',
+        backgroundColor: 'rgba(224,85,235,0.5)'}];
+        const dataFisica = [{label:"Fisica", data: [v.fisica,p.fisica,k.fisica],borderColor: 'rgba(224,85,235,0.5)',
+        backgroundColor: 'rgba(224,85,235,0.5)'}];
+        const dataAmbiente = [{label:"Ambiente", data: [v.ambiente,p.ambiente,k.ambiente],borderColor: 'rgba(224,85,235,0.5)',
+        backgroundColor: 'rgba(224,85,235,0.5)'}];
+        const dataMental = [{label:"Mental", data: [v.mental,p.mental,k.mental],borderColor: 'rgba(224,85,235,0.5)',
+        backgroundColor: 'rgba(224,85,235,0.5)'}];
+        const dataEmocional = [{label:"Emocional", data: [v.emocional,p.emocional,k.emocional],borderColor: 'rgba(224,85,235,0.5)',
+        backgroundColor: 'rgba(224,85,235,0.5)'}];
         const data = {
             labels: ['Vata', 'Pitta', 'Kapha'],
             datasets: [{
