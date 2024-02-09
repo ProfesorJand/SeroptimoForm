@@ -9,644 +9,682 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <form id="form" onsubmit="enviar(event)" >
-        <fieldset class="borderBlanco">
-            <legend>Datos Personales:</legend>
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" value="VUAAAMO" required><br><br>
-            <label for="correo">Correo</label><br>
-            <input type="email" id="correo" name="correo" value="example@gmail.com" required><br>
+  <form id="form" onsubmit="enviar(event)" >
+      <fieldset class="borderBlanco">
+          <legend>Datos Personales:</legend>
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" value="VUAAAMO" required><br><br>
+          <label for="correo">Correo</label><br>
+          <input type="email" id="correo" name="correo" value="example@gmail.com" required><br>
+      </fieldset>
+      <fieldset class="borderBlanco">
+          <legend>Area</legend>
+          <fieldset>
+              <legend>1. Constitución física:</legend>
+                <label>
+                  <input type="radio" name="preg1" value="v" checked required />
+                  Delgada/Huesuda
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg1" value="p" />
+                  Moderado
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg1" value="k" />
+                  Grande / Robusta / Bien Desarrollada
+                </label><br>
+          </fieldset>
+          <fieldset>
+              <legend>2. Estatura:</legend>
+                <label>
+                  <input type="radio" name="preg2" value="v" checked required />
+                  Muy Pequeño / Muy Alto
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg2" value="p" />
+                  Mediana
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg2" value="k" />
+                  Un poco por debajo del promedio
+                </label><br>
+          </fieldset>
+          <fieldset>
+              <legend>3. Peso:</legend>
+                <label>
+                  <input type="radio" name="preg3" value="v" checked required />
+                  Dificultad para ganar peso
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg3" value="p" />
+                  Mediano / Puede ganar y perder peso con facilidad
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg3" value="k" />
+                  Generalmente con sobrepeso / Dificultad para perderlo
+                </label><br>
+          </fieldset>
+          <fieldset>
+              <legend>4. Brillo de la piel:</legend>
+                <label>
+                  <input type="radio" name="preg4" value="v" checked required />
+                  Opaco / Oscuro
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg4" value="p" />
+                  Rojo y lustroso
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg4" value="k" />
+                  Banco / Pálido
+                </label><br>
+          </fieldset>
+          <fieldset>
+              <legend>5. Textura de la piel:</legend>
+                <label>
+                  <input type="radio" name="preg5" value="v" checked required />
+                  Seca / Áspera / Rugosa/ Venas prominentes
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg5" value="p" />
+                  Caliente / Grasosa / Húmeda / Pecas / Acné
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg5" value="k" />
+                  Gruesa / Fría / Bien lubricada
+                </label><br>
+          </fieldset>
+          <fieldset>
+              <legend>6. Temperatura del cuerpo:</legend>
+                <label>
+                  <input type="radio" name="preg6" value="v" checked required />
+                  Manos y pies frios
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg6" value="p" />
+                  Caliente
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg6" value="k" />
+                  Un poco frío o normal
+                </label><br>
+          </fieldset>
+          <fieldset>
+              <legend>7. Pelo:</legend>
+                <label>
+                  <input type="radio" name="preg7" value="v" checked required />
+                  Seco / Fino / Crespo
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg7" value="p" />
+                  Oleoso / Calvicie prematura / Canas
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg7" value="k" />
+                  Fuerte / Ondulado / Lustroso
+                </label><br>
+          </fieldset>
+          <fieldset>
+              <legend>8. Frente:</legend>
+                <label>
+                  <input type="radio" name="preg8" value="v" checked required />
+                  Estrecha / Pequeña
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg8" value="p" />
+                  Moderada / Surcos / Entradas
+                </label><br>
+              
+                <label>
+                  <input type="radio" name="preg8" value="k" />
+                  Ancha
+                </label><br>
+          </fieldset>
+          <fieldset>
+            <legend>9. Ojos:</legend>
+              <label>
+                <input type="radio" name="preg9" value="v" checked required />
+                Pequeños / Nerviosos
+              </label><br>
+            
+              <label>
+                <input type="radio" name="preg9" value="p" />
+                Penetrantes / Se irritan fácilmente
+              </label><br>
+            
+              <label>
+                <input type="radio" name="preg9" value="k" />
+                Grandes / Atractivos / Pestañas grande
+              </label><br>
         </fieldset>
-        <fieldset class="borderBlanco">
-            <legend>Area</legend>
-            <fieldset>
-                <legend>1. Constitución física:</legend>
-                  <label>
-                    <input type="radio" name="preg1" value="v" checked required />
-                    Delgada/Huesuda
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg1" value="p" />
-                    Moderado
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg1" value="k" />
-                    Grande / Robusta / Bien Desarrollada
-                  </label><br>
-            </fieldset>
-            <fieldset>
-                <legend>2. Estatura:</legend>
-                  <label>
-                    <input type="radio" name="preg2" value="v" checked required />
-                    Muy Pequeño / Muy Alto
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg2" value="p" />
-                    Mediana
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg2" value="k" />
-                    Un poco por debajo del promedio
-                  </label><br>
-            </fieldset>
-            <fieldset>
-                <legend>3. Peso:</legend>
-                  <label>
-                    <input type="radio" name="preg3" value="v" checked required />
-                    Dificultad para ganar peso
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg3" value="p" />
-                    Mediano / Puede ganar y perder peso con facilidad
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg3" value="k" />
-                    Generalmente con sobrepeso / Dificultad para perderlo
-                  </label><br>
-            </fieldset>
-            <fieldset>
-                <legend>4. Brillo de la piel:</legend>
-                  <label>
-                    <input type="radio" name="preg4" value="v" checked required />
-                    Opaco / Oscuro
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg4" value="p" />
-                    Rojo y lustroso
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg4" value="k" />
-                    Banco / Pálido
-                  </label><br>
-            </fieldset>
-            <fieldset>
-                <legend>5. Textura de la piel:</legend>
-                  <label>
-                    <input type="radio" name="preg5" value="v" checked required />
-                    Seca / Áspera / Rugosa/ Venas prominentes
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg5" value="p" />
-                    Caliente / Grasosa / Húmeda / Pecas / Acné
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg5" value="k" />
-                    Gruesa / Fría / Bien lubricada
-                  </label><br>
-            </fieldset>
-            <fieldset>
-                <legend>6. Temperatura del cuerpo:</legend>
-                  <label>
-                    <input type="radio" name="preg6" value="v" checked required />
-                    Manos y pies frios
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg6" value="p" />
-                    Caliente
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg6" value="k" />
-                    Un poco frío o normal
-                  </label><br>
-            </fieldset>
-            <fieldset>
-                <legend>7. Pelo:</legend>
-                  <label>
-                    <input type="radio" name="preg7" value="v" checked required />
-                    Seco / Fino / Crespo
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg7" value="p" />
-                    Oleoso / Calvicie prematura / Canas
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg7" value="k" />
-                    Fuerte / Ondulado / Lustroso
-                  </label><br>
-            </fieldset>
-            <fieldset>
-                <legend>8. Frente:</legend>
-                  <label>
-                    <input type="radio" name="preg8" value="v" checked required />
-                    Estrecha / Pequeña
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg8" value="p" />
-                    Moderada / Surcos / Entradas
-                  </label><br>
-                
-                  <label>
-                    <input type="radio" name="preg8" value="k" />
-                    Ancha
-                  </label><br>
-            </fieldset>
-            <fieldset>
-              <legend>9. Ojos:</legend>
-                <label>
-                  <input type="radio" name="preg9" value="v" checked required />
-                  Pequeños / Nerviosos
-                </label><br>
-              
-                <label>
-                  <input type="radio" name="preg9" value="p" />
-                  Penetrantes / Se irritan fácilmente
-                </label><br>
-              
-                <label>
-                  <input type="radio" name="preg9" value="k" />
-                  Grandes / Atractivos / Pestañas grande
-                </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>10. Dientes:</legend>
-              <label>
-                <input type="radio" name="preg10" value="v" checked required />
-                Irregulares / Pequeños / Mal formados
-              </label><br>
+        <fieldset>
+          <legend>10. Dientes:</legend>
+            <label>
+              <input type="radio" name="preg10" value="v" checked required />
+              Irregulares / Pequeños / Mal formados
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg10" value="p" />
+              Regulares / Encías sangran con facilidad
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg10" value="k" />
+              Grandes / Bien formados
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>11. Lengua:</legend>
+            <label>
+              <input type="radio" name="preg11" value="v" checked required />
+              Áspera
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg11" value="p" />
+              Suave / Rosada
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg11" value="k" />
+              Gruesa
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>12. Cara:</legend>
+            <label>
+              <input type="radio" name="preg12" value="v" checked required />
+              Pequeña / Arrugada / Seca
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg12" value="p" />
+              Delicada / Rojiza / Perfil agudo
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg12" value="k" />
+              Gruesa / Agradable / Perfil suave
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>13. Tórax / Pecho:</legend>
+            <label>
+              <input type="radio" name="preg13" value="v" checked required />
+              Estrecho / Pequeño
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg13" value="p" />
+              Moderadamente desarrollado
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg13" value="k" />
+              Ancho / Bien desarrollado
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>14. Huesos:</legend>
+            <label>
+              <input type="radio" name="preg14" value="v" checked required />
+              Delgados / Articulaciones crujientes
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg14" value="p" />
+              Medianos / Articulaciones flojas
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg14" value="k" />
+              Gruesos / Articulaciones fuertes
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>15. Uñas:</legend>
+            <label>
+              <input type="radio" name="preg15" value="v" checked required />
+              Quebradiza / Ásperas
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg15" value="p" />
+              Suaves / Rosadas
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg15" value="k" />
+              Anchas
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>16. Sueño:</legend>
+            <label>
+              <input type="radio" name="preg16" value="v" checked required />
+              Ligero con interrupciones
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg16" value="p" />
+              Variable
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg16" value="k" />
+              Profundo / Excesivo
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>17. Le disgusta:</legend>
+            <label>
+              <input type="radio" name="preg17" value="v" checked required />
+              El frío / La sequedad
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg17" value="p" />
+              Sustancias y atmósfera caliente
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg17" value="k" />
+              Sustancias frías y aceitosas / Atmósfera húmeda
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>18. Apetito:</legend>
+            <label>
+              <input type="radio" name="preg18" value="v" checked required />
+              Variable / Nervioso
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg18" value="p" />
+              Grande / Irritable si debe saltar la comida
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg10" value="p" />
-                Regulares / Encías sangran con facilidad
-              </label><br>
+            <label>
+              <input type="radio" name="preg18" value="k" />
+              Moderado pero constante
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>19. Sed:</legend>
+            <label>
+              <input type="radio" name="preg19" value="v" checked required />
+              Escasa
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg19" value="p" />
+              Generalmente sediente
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg10" value="k" />
-                Grandes / Bien formados
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>11. Lengua:</legend>
-              <label>
-                <input type="radio" name="preg11" value="v" checked required />
-                Áspera
-              </label><br>
+            <label>
+              <input type="radio" name="preg19" value="k" />
+              Moderada
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>20. Estado instestinal:</legend>
+            <label>
+              <input type="radio" name="preg20" value="v" checked required />
+              Heces duras / Secas / Constipación
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg20" value="p" />
+              Heces suave / Sueltas / Tendencia a diarrea
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg11" value="p" />
-                Suave / Rosada
-              </label><br>
+            <label>
+              <input type="radio" name="preg20" value="k" />
+              Regular / Heces normales
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>21. Orina:</legend>
+            <label>
+              <input type="radio" name="preg21" value="v" checked required />
+              Escasa
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg21" value="p" />
+              Abundante / Amarilla intensa
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg11" value="k" />
-                Gruesa
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>12. Cara:</legend>
-              <label>
-                <input type="radio" name="preg12" value="v" checked required />
-                Pequeña / Arrugada / Seca
-              </label><br>
+            <label>
+              <input type="radio" name="preg21" value="k" />
+              Escasa
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>22. Sudoración:</legend>
+            <label>
+              <input type="radio" name="preg22" value="v" checked required />
+              Escasa sin olor
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg22" value="p" />
+              Mucha / Olor intenso
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg12" value="p" />
-                Delicada / Rojiza / Perfil agudo
-              </label><br>
+            <label>
+              <input type="radio" name="preg22" value="k" />
+              Moderada
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>23. Memoria:</legend>
+            <label>
+              <input type="radio" name="preg23" value="v" checked required />
+              Rápida / Tendencia a olvidar
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg23" value="p" />
+              Aguda / Clara
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg12" value="k" />
-                Gruesa / Agradable / Perfil suave
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>13. Tórax / Pecho:</legend>
-              <label>
-                <input type="radio" name="preg13" value="v" checked required />
-                Estrecho / Pequeño
-              </label><br>
+            <label>
+              <input type="radio" name="preg23" value="k" />
+              Lenta pero constante
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>24. Comprensión:</legend>
+            <label>
+              <input type="radio" name="preg24" value="v" checked required />
+              Espontánea / Rápida
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg24" value="p" />
+              Promedio
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg13" value="p" />
-                Moderadamente desarrollado
-              </label><br>
+            <label>
+              <input type="radio" name="preg24" value="k" />
+              Requiere tiempo para comprender
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>25. Relación al estrés:</legend>
+            <label>
+              <input type="radio" name="preg25" value="v" checked required />
+              Miedo / Ansiedad bajo estrés
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg25" value="p" />
+              Frustración / Irritabilidad / Enojo bajo estrés
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg13" value="k" />
-                Ancho / Bien desarrollado
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>14. Huesos:</legend>
-              <label>
-                <input type="radio" name="preg14" value="v" checked required />
-                Delgados / Articulaciones crujientes
-              </label><br>
+            <label>
+              <input type="radio" name="preg25" value="k" />
+              Maneja bien el estrés
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>26. Resistencia a enfermedades:</legend>
+            <label>
+              <input type="radio" name="preg26" value="v" checked required />
+              Pobre / Sistema inmune variable
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg26" value="p" />
+              Mediana / Tendencia a infecciones
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg14" value="p" />
-                Medianos / Articulaciones flojas
-              </label><br>
+            <label>
+              <input type="radio" name="preg26" value="k" />
+              Buena / Consistente / Sistema inmune fuerte
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>27. Enfermedades frecuentes:</legend>
+            <label>
+              <input type="radio" name="preg27" value="v" checked required />
+              Alteraciones nerviosas y mentales / Dolores neurálgicos (nervios) y articulaciones
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg27" value="p" />
+              Infecciones / Inflamaciones / Trastornos sanguíneos
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg14" value="k" />
-                Gruesos / Articulaciones fuertes
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>15. Uñas:</legend>
-              <label>
-                <input type="radio" name="preg15" value="v" checked required />
-                Quebradiza / Ásperas
-              </label><br>
+            <label>
+              <input type="radio" name="preg27" value="k" />
+              Respiratorias / Edema / Mucosidades / Inflamación articular
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>28. Sexualidad:</legend>
+            <label>
+              <input type="radio" name="preg28" value="v" checked required />
+              Interés sexual variable / Fantasía sexual activa
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg28" value="p" />
+              Interés e impulso sexual alto
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg15" value="p" />
-                Suaves / Rosadas
-              </label><br>
+            <label>
+              <input type="radio" name="preg28" value="k" />
+              Interés e impuso sexual constante
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>29. Estado de animo:</legend>
+            <label>
+              <input type="radio" name="preg29" value="v" checked required />
+              Ideas y estado de animo cambiante
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg29" value="p" />
+              Intenso al expresar ideas y sentimientos
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg15" value="k" />
-                Anchas
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>16. Sueño:</legend>
-              <label>
-                <input type="radio" name="preg16" value="v" checked required />
-                Ligero con interrupciones
-              </label><br>
+            <label>
+              <input type="radio" name="preg29" value="k" />
+              Estable confiado / Lento para cambiar de idea
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>30. Preferencias climáticas:</legend>
+            <label>
+              <input type="radio" name="preg30" value="v" checked required />
+              Climas calientes / Sol / Humedad
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg30" value="p" />
+              Climas fríos / Bien ventilados
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg16" value="p" />
-                Variable
-              </label><br>
+            <label>
+              <input type="radio" name="preg30" value="k" />
+              Cualquier clima siempre que no sea húmedo
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>31. Actividad:</legend>
+            <label>
+              <input type="radio" name="preg31" value="v" checked required />
+              Inquieto
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg31" value="p" />
+              Moderado
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg16" value="k" />
-                Profundo / Excesivo
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>17. Le disgusta:</legend>
-              <label>
-                <input type="radio" name="preg17" value="v" checked required />
-                El frío / La sequedad
-              </label><br>
+            <label>
+              <input type="radio" name="preg31" value="k" />
+              Se mueve lentamente
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>32. Temperamento:</legend>
+            <label>
+              <input type="radio" name="preg32" value="v" checked required />
+              Nervioso / Cambiante
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg32" value="p" />
+              Motivado / Intenso
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg17" value="p" />
-                Sustancias y atmósfera caliente
-              </label><br>
+            <label>
+              <input type="radio" name="preg32" value="k" />
+              Conservador
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>33. Emociones positivas:</legend>
+            <label>
+              <input type="radio" name="preg33" value="v" checked required />
+              Adaptabilidad
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg33" value="p" />
+              Valor / Coraje
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg17" value="k" />
-                Sustancias frías y aceitosas / Atmósfera húmeda
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>18. Apetito:</legend>
-              <label>
-                <input type="radio" name="preg18" value="v" checked required />
-                Variable / Nervioso
-              </label><br>
+            <label>
+              <input type="radio" name="preg33" value="k" />
+              Amor
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>34. Emociones negativas:</legend>
+            <label>
+              <input type="radio" name="preg34" value="v" checked required />
+              Miedo
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg34" value="p" />
+              Cólera / Enojo intenso
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg18" value="p" />
-                Grande / Irritable si debe saltar la comida
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg18" value="k" />
-                Moderado pero constante
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>19. Sed:</legend>
-              <label>
-                <input type="radio" name="preg19" value="v" checked required />
-                Escasa
-              </label><br>
+            <label>
+              <input type="radio" name="preg34" value="k" />
+              Apego
+            </label><br>
+        </fieldset>
+        <fieldset>
+          <legend>35. Fé:</legend>
+            <label>
+              <input type="radio" name="preg35" value="v" checked required />
+              Variable / Errática
+            </label><br>
+          
+            <label>
+              <input type="radio" name="preg35" value="p" />
+              Fuerte / Determinado
+            </label><br>
             
-              <label>
-                <input type="radio" name="preg19" value="p" />
-                Generalmente sediente
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg19" value="k" />
-                Moderada
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>20. Estado instestinal:</legend>
-              <label>
-                <input type="radio" name="preg20" value="v" checked required />
-                Heces duras / Secas / Constipación
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg20" value="p" />
-                Heces suave / Sueltas / Tendencia a diarrea
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg20" value="k" />
-                Regular / Heces normales
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>21. Orina:</legend>
-              <label>
-                <input type="radio" name="preg21" value="v" checked required />
-                Escasa
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg21" value="p" />
-                Abundante / Amarilla intensa
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg21" value="k" />
-                Escasa
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>22. Sudoración:</legend>
-              <label>
-                <input type="radio" name="preg22" value="v" checked required />
-                Escasa sin olor
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg22" value="p" />
-                Mucha / Olor intenso
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg22" value="k" />
-                Moderada
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>23. Memoria:</legend>
-              <label>
-                <input type="radio" name="preg23" value="v" checked required />
-                Rápida / Tendencia a olvidar
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg23" value="p" />
-                Aguda / Clara
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg23" value="k" />
-                Lenta pero constante
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>24. Comprensión:</legend>
-              <label>
-                <input type="radio" name="preg24" value="v" checked required />
-                Espontánea / Rápida
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg24" value="p" />
-                Promedio
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg24" value="k" />
-                Requiere tiempo para comprender
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>25. Relación al estrés:</legend>
-              <label>
-                <input type="radio" name="preg25" value="v" checked required />
-                Miedo / Ansiedad bajo estrés
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg25" value="p" />
-                Frustración / Irritabilidad / Enojo bajo estrés
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg25" value="k" />
-                Maneja bien el estrés
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>26. Resistencia a enfermedades:</legend>
-              <label>
-                <input type="radio" name="preg26" value="v" checked required />
-                Pobre / Sistema inmune variable
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg26" value="p" />
-                Mediana / Tendencia a infecciones
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg26" value="k" />
-                Buena / Consistente / Sistema inmune fuerte
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>27. Enfermedades frecuentes:</legend>
-              <label>
-                <input type="radio" name="preg27" value="v" checked required />
-                Alteraciones nerviosas y mentales / Dolores neurálgicos (nervios) y articulaciones
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg27" value="p" />
-                Infecciones / Inflamaciones / Trastornos sanguíneos
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg27" value="k" />
-                Respiratorias / Edema / Mucosidades / Inflamación articular
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>28. Sexualidad:</legend>
-              <label>
-                <input type="radio" name="preg28" value="v" checked required />
-                Interés sexual variable / Fantasía sexual activa
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg28" value="p" />
-                Interés e impulso sexual alto
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg28" value="k" />
-                Interés e impuso sexual constante
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>29. Estado de animo:</legend>
-              <label>
-                <input type="radio" name="preg29" value="v" checked required />
-                Ideas y estado de animo cambiante
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg29" value="p" />
-                Intenso al expresar ideas y sentimientos
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg29" value="k" />
-                Estable confiado / Lento para cambiar de idea
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>30. Preferencias climáticas:</legend>
-              <label>
-                <input type="radio" name="preg30" value="v" checked required />
-                Climas calientes / Sol / Humedad
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg30" value="p" />
-                Climas fríos / Bien ventilados
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg30" value="k" />
-                Cualquier clima siempre que no sea húmedo
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>31. Actividad:</legend>
-              <label>
-                <input type="radio" name="preg31" value="v" checked required />
-                Inquieto
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg31" value="p" />
-                Moderado
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg31" value="k" />
-                Se mueve lentamente
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>32. Temperamento:</legend>
-              <label>
-                <input type="radio" name="preg32" value="v" checked required />
-                Nervioso / Cambiante
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg32" value="p" />
-                Motivado / Intenso
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg32" value="k" />
-                Conservador
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>33. Emociones positivas:</legend>
-              <label>
-                <input type="radio" name="preg33" value="v" checked required />
-                Adaptabilidad
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg33" value="p" />
-                Valor / Coraje
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg33" value="k" />
-                Amor
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>34. Emociones negativas:</legend>
-              <label>
-                <input type="radio" name="preg34" value="v" checked required />
-                Miedo
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg34" value="p" />
-                Cólera / Enojo intenso
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg34" value="k" />
-                Apego
-              </label><br>
-          </fieldset>
-          <fieldset>
-            <legend>35. Fé:</legend>
-              <label>
-                <input type="radio" name="preg35" value="v" checked required />
-                Variable / Errática
-              </label><br>
-            
-              <label>
-                <input type="radio" name="preg35" value="p" />
-                Fuerte / Determinado
-              </label><br>
-              
-              <label>
-                <input type="radio" name="preg35" value="k" />
-                Sostenida / Lenta en cambiar
-              </label><br>
-          </fieldset>
+            <label>
+              <input type="radio" name="preg35" value="k" />
+              Sostenida / Lenta en cambiar
+            </label><br>
+        </fieldset>
 
-        </fieldset>
-        
-        <input type="submit"  value="Enviar"/>
-        
-      </form> 
-      <div class="ContainerResults">
-        <p id="parrafoResultado"></p>
+      </fieldset>
+      
+      <input type="submit"  value="Enviar"/>
+      
+  </form> 
+  <table id="tablaResultados" class="hide">
+    <thead>
+      <tr>
+        <th>DOSHA</th>
+        <th>TOTAL</th>
+        <th>FISICO</th>
+        <th>AMBIENTE</th>
+        <th>MENTAL</th>
+        <th>EMOCIONAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="tableRowVata">
+        <td>VATA</td>
+        <td id="totalVata"></td>
+        <td id="fisicoVata"></td>
+        <td id="ambienteVata"></td>
+        <td id="mentalVata"></td>
+        <td id="emocionalVata"></td>
+      </tr>
+      <tr id="tableRowPitta">
+        <td>PITTA</td>
+        <td id="totalPitta"></td>
+        <td id="fisicoPitta"></td>
+        <td id="ambientePitta"></td>
+        <td id="mentalPitta"></td>
+        <td id="emocionalPitta"></td>
+      </tr>
+      <tr id="tableRowKapha">
+        <td>KAPHA</td>
+        <td id="totalKapha"></td>
+        <td id="fisicoKapha"></td>
+        <td id="ambienteKapha"></td>
+        <td id="mentalKapha"></td>
+        <td id="emocionalKapha"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="ContainerResults hide">
+    <p id="parrafoResultado"></p>
+  </div>
+  <div class="ContainerGraficos hide" >
+    <div class="BoxGraficosTotales">
+      <canvas id="graficoTotal" ></canvas>
+    </div>
+    <div class="ContainerGraficosArea">
+      <div class="BoxGraficosArea">
+        <canvas id="graficoFisica" ></canvas>
       </div>
-      <div class="ContainerGraficos">
-        <div class="BoxGraficosTotales">
-          <canvas id="graficoTotal" ></canvas>
-        </div>
-        <div class="ContainerGraficosArea">
-          <div class="BoxGraficosArea">
-            <canvas id="graficoFisica" ></canvas>
-          </div>
-          <div class="BoxGraficosArea">
-            <canvas id="graficoAmbiente" ></canvas>
-          </div>
-          <div class="BoxGraficosArea">
-            <canvas id="graficoMental" ></canvas>
-          </div>
-          <div class="BoxGraficosArea">
-            <canvas id="graficoEmocional" ></canvas>
-          </div>
-        </div>
+      <div class="BoxGraficosArea">
+        <canvas id="graficoAmbiente" ></canvas>
       </div>
-      <div id="ContainerPDF" class="hide">
-        <object id="objectPDF" data="" type="application/pdf" width="100%" height="500px">
-          <p>No es posible mostrar el PDF en el navegador usa este enlace: <a id="anchorDoshaGratis" href="">Tu Dosha</a></p>
-        </object>
+      <div class="BoxGraficosArea">
+        <canvas id="graficoMental" ></canvas>
       </div>
+      <div class="BoxGraficosArea">
+        <canvas id="graficoEmocional" ></canvas>
+      </div>
+    </div>
+  </div>
+  <div id="ContainerPDF" class="hide">
+    <object id="objectPDF" data="" type="application/pdf" width="100%" height="500px">
+      <p>No es posible mostrar el PDF en el navegador usa este enlace: <a id="anchorDoshaGratis" href="">Tu Dosha</a></p>
+    </object>
+  </div>
       
 
   

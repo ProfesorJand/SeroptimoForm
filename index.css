@@ -2,6 +2,7 @@ body{
     background-color: #130358;
     margin: 20px 0px;
     color:#e0e0e0;
+    font-size:20px;
 }
 
 a:link {
@@ -21,13 +22,6 @@ a:link {
   /* selected link */
   a:active {
     color: blue;
-  }
-
-  .hide{
-    display: none;
-  }
-  .show{
-    display: block;
   }
 
   fieldset{
@@ -103,13 +97,65 @@ a:link {
     justify-content: center;
   }
 
+  /* table{
+    border-collapse: collapse;  
+  } */
+
+  table, td, th{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table{
+    border: 1px solid;
+    text-align: center;
+    width: 80%;
+  }
+
+  td{
+    width: 16%;
+  }
+
+   #tableRowVata{
+    background-color: rgb(200, 245, 245);
+    color: black;
+   }
+
+   #tableRowPitta{
+    background-color: rgb(245, 200, 200);
+    color: black;
+   }
+
+   #tableRowKapha{
+    background-color: rgb(242, 245, 200);
+    color: black;
+   }
+
+   .hide{
+    display: none;
+  }
+  .show{
+    display: flex;
+  }
+
+  .showTable{
+    display: table;
+  }
+
   @media (max-width: 720px) {
+    body{
+      font-size:16px;
+    }
     .ContainerGraficos{
       flex-direction: column;
     }
     .BoxGraficosArea{
       flex:100%;
       height: auto;
+    }
+    table {
+      width: 90%;
+      font-size:10px;
     }
   }
   

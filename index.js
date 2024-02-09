@@ -115,11 +115,18 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
         const anchorDoshaGratis = document.getElementById("anchorDoshaGratis");
         anchorDoshaGratis.href = urlGratisDosha
         draw({v, p, k},resultadoDosha);
+        llenarDatosTabla({v,p,k})
         
       }
 
       
       function draw({v,p,k},resultadoDosha) {
+        const containerResults = document.getElementsByClassName("ContainerResults");
+        const containerGraficos = document.getElementsByClassName("ContainerGraficos");
+        containerResults[0].classList.remove("hide");
+        containerGraficos[0].classList.remove("hide");
+        containerResults[0].classList.add("show");
+        containerGraficos[0].classList.add("show");
         var ctxT = document.getElementById("graficoTotal");
         var ctxF = document.getElementById("graficoFisica");
         var ctxA = document.getElementById("graficoAmbiente");
@@ -241,4 +248,28 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           options:{...options, scales: {...options.scales, r:{...options.scales.r, suggestedMax:suggestedMaxEmocional}}},
           animation
         });
+      }
+
+      function llenarDatosTabla({v,p,k}){
+        const tablaResultados = document.getElementById("tablaResultados");
+        tablaResultados.classList = "showTable";
+        document.getElementById("totalVata").innerHTML = v.total;
+        document.getElementById("fisicoVata").innerHTML = v.fisica;
+        document.getElementById("ambienteVata").innerHTML = v.ambiente;
+        document.getElementById("mentalVata").innerHTML = v.mental;
+        document.getElementById("emocionalVata").innerHTML = v.emocional;
+
+        document.getElementById("totalPitta").innerHTML = p.total;
+        document.getElementById("fisicoPitta").innerHTML = p.fisica;
+        document.getElementById("ambientePitta").innerHTML = p.ambiente;
+        document.getElementById("mentalPitta").innerHTML = p.mental;
+        document.getElementById("emocionalPitta").innerHTML = p.emocional;
+
+        document.getElementById("totalKapha").innerHTML = k.total;
+        document.getElementById("fisicoKapha").innerHTML = k.fisica;
+        document.getElementById("ambienteKapha").innerHTML = k.ambiente;
+        document.getElementById("mentalKapha").innerHTML = k.mental;
+        document.getElementById("emocionalKapha").innerHTML = k.emocional;
+
+
       }
