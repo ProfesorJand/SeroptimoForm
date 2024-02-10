@@ -1,6 +1,15 @@
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const TEMPLATE_ID = urlParams.get("template");
+const SERVICE_ID = urlParams.get("service");
+const emailRemitente = "seroptimo.salud@gmail.com";
+
 const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:null};
       function enviar(e){
         e.preventDefault();
+        const emailReceptor = document.getElementsByName("correo")[0].value;
+        console.log("emailReceptor", emailReceptor)
         const urlBase = "https://guiadeparche.com/ser-optimo/";
         const nombre = document.getElementById("nombre").value;
         let v = {total:0, fisica:0, ambiente:0, mental:0,emocional:0};
@@ -41,8 +50,6 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
             resultadoDosha = "Tridosha";
             urlPaypalDosha = "URLTRIDOSHA";
             urlGratisDosha = urlBase + "Tridosha_Inicial.pdf",'_blank','noopener';
-            textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
-            elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
         else if(v.total >= 15 && p.total >= 12 ||  p.total >= 15 && v.total >= 12){
@@ -50,8 +57,6 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Vata - Pitta";
           urlPaypalDosha = "URL Vata - Pitta";
           urlGratisDosha = urlBase + "Vata_Pitta_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
-          elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
         else if(v.total >= 15 && k.total >= 12 ||  k.total >= 15 && v.total >= 12){
@@ -59,8 +64,6 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Vata - Kapha";
           urlPaypalDosha = "URL Vata - Kapha";
           urlGratisDosha = urlBase + "Vata_Kapha_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
-          elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
         else if(p.total >= 15 && k.total >= 12 ||  k.total >= 15 && p.total >= 12){
@@ -68,8 +71,6 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Pitta - Kapha";
           urlPaypalDosha = "URL Pitta - Kapha";
           urlGratisDosha = urlBase + "Pitta_Kapha_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
-          elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
         else if(v.total > p.total && v.total > k.total){
@@ -77,8 +78,6 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Vata";
           urlPaypalDosha = "URL Vata";
           urlGratisDosha = urlBase + "Vata_Inicial.pdf",'_blank','noopener'
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
-          elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
         else if(p.total > v.total && p.total > k.total){
@@ -86,8 +85,6 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Pitta";
           urlPaypalDosha = "URL Pitta";
           urlGratisDosha = urlBase + "Pitta_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
-          elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
         else{
@@ -95,10 +92,10 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
           resultadoDosha = "Kapha";
           urlPaypalDosha = "URL Kapha";
           urlGratisDosha = urlBase + "Kapha_Inicial.pdf",'_blank','noopener';
-          textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
-          elementoParrafoResultado.innerHTML = textoParrafoResultado;
           // window.open(urlGratisDosha)
         }
+        textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
+        elementoParrafoResultado.innerHTML = textoParrafoResultado;
         alert("Vata: "+ v.total +", Pitta: "+ p.total + ", Kapha: "+ k.total);
         const containerPDF = document.getElementById("ContainerPDF");
         containerPDF.classList = "show";
@@ -108,11 +105,12 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
         anchorDoshaGratis.href = urlGratisDosha
         draw({v, p, k},resultadoDosha);
         llenarDatosTabla({v,p,k})
+        enviarCorreo({nombre, emailReceptor, resultadoDosha, urlPaypalDosha, urlGratisDosha, emailRemitente});
         
       }
 
       
-      function draw({v,p,k},resultadoDosha) {
+      function draw({v,p,k},resultadoDosha,) {
         const containerResults = document.getElementsByClassName("ContainerResults");
         const containerGraficos = document.getElementsByClassName("ContainerGraficos");
         containerResults[0].classList.remove("hide");
@@ -264,4 +262,18 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
         document.getElementById("emocionalKapha").innerHTML = k.emocional;
 
 
+      }
+
+      function enviarCorreo(variables){
+
+        
+        emailjs.send(SERVICE_ID,TEMPLATE_ID, variables).then(
+          (response) => {
+            console.log('SUCCESS!', response.status, response.text, "variables: ", variables);
+          },
+          (error) => {
+            console.log('FAILED...', error, "variables: ", variables);
+          },
+        );
+        
       }
