@@ -47,56 +47,55 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
         let textoParrafoResultado
         if(v.total >= 9 && p.total >= 9 && k.total >= 9){
             // tridosha
-            resultadoDosha = "Tridosha";
+            resultadoDosha = "TRIDOSHA";
             urlPaypalDosha = "URLTRIDOSHA";
             urlGratisDosha = urlBase + "Tridosha_Inicial.pdf",'_blank','noopener';
           // window.open(urlGratisDosha)
         }
         else if(v.total >= 15 && p.total >= 12 ||  p.total >= 15 && v.total >= 12){
           // Vata - Pitta
-          resultadoDosha = "Vata - Pitta";
+          resultadoDosha = "VATA_PITTA";
           urlPaypalDosha = "URL Vata - Pitta";
           urlGratisDosha = urlBase + "Vata_Pitta_Inicial.pdf",'_blank','noopener';
           // window.open(urlGratisDosha)
         }
         else if(v.total >= 15 && k.total >= 12 ||  k.total >= 15 && v.total >= 12){
           // Vata - Kapha
-          resultadoDosha = "Vata - Kapha";
+          resultadoDosha = "VATA_KAPHA";
           urlPaypalDosha = "URL Vata - Kapha";
           urlGratisDosha = urlBase + "Vata_Kapha_Inicial.pdf",'_blank','noopener';
           // window.open(urlGratisDosha)
         }
         else if(p.total >= 15 && k.total >= 12 ||  k.total >= 15 && p.total >= 12){
           // Pitta - Kapha
-          resultadoDosha = "Pitta - Kapha";
+          resultadoDosha = "PITTA_KAPHA";
           urlPaypalDosha = "URL Pitta - Kapha";
           urlGratisDosha = urlBase + "Pitta_Kapha_Inicial.pdf",'_blank','noopener';
           // window.open(urlGratisDosha)
         }
         else if(v.total > p.total && v.total > k.total){
           //Vata
-          resultadoDosha = "Vata";
+          resultadoDosha = "VATA";
           urlPaypalDosha = "URL Vata";
           urlGratisDosha = urlBase + "Vata_Inicial.pdf",'_blank','noopener'
           // window.open(urlGratisDosha)
         }
         else if(p.total > v.total && p.total > k.total){
           //Pitta
-          resultadoDosha = "Pitta";
+          resultadoDosha = "PITTA";
           urlPaypalDosha = "URL Pitta";
           urlGratisDosha = urlBase + "Pitta_Inicial.pdf",'_blank','noopener';
           // window.open(urlGratisDosha)
         }
         else{
           //Kapha
-          resultadoDosha = "Kapha";
+          resultadoDosha = "KAPHA";
           urlPaypalDosha = "URL Kapha";
           urlGratisDosha = urlBase + "Kapha_Inicial.pdf",'_blank','noopener';
           // window.open(urlGratisDosha)
         }
         textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
         elementoParrafoResultado.innerHTML = textoParrafoResultado;
-        alert("Vata: "+ v.total +", Pitta: "+ p.total + ", Kapha: "+ k.total);
         const containerPDF = document.getElementById("ContainerPDF");
         containerPDF.classList = "show";
         const objectPDF = document.getElementById("objectPDF");
