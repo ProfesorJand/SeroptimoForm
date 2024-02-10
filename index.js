@@ -104,7 +104,7 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
         anchorDoshaGratis.href = urlGratisDosha
         draw({v, p, k},resultadoDosha);
         llenarDatosTabla({v,p,k})
-        enviarCorreo({nombre, emailReceptor, resultadoDosha, urlPaypalDosha, urlGratisDosha, emailRemitente});
+        enviarCorreo({nombre, emailReceptor, resultadoDosha, urlPaypalDosha, urlGratisDosha, emailRemitente, v, k , p});
         
       }
 
@@ -264,8 +264,6 @@ const grafico = {total:null, fisica:null, ambiente:null, mental:null, emocional:
       }
 
       function enviarCorreo(variables){
-
-        
         emailjs.send(SERVICE_ID,TEMPLATE_ID, variables).then(
           (response) => {
             console.log('SUCCESS!', response.status, response.text, "variables: ", variables);
