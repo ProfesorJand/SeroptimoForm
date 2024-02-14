@@ -142,6 +142,10 @@ a:link {
     display: table;
   }
 
+  .ContainerPDF{
+    height: 2vw;
+  }
+
   @media (max-width: 720px) {
     body{
       font-size:16px;
@@ -156,6 +160,11 @@ a:link {
     table {
       width: 90%;
       font-size:10px;
+    }
+    .ContainerPDF{
+      min-height: 500px;
+      height: auto;
+      max-height: 1000px;
     }
   }
   
