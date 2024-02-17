@@ -134,9 +134,6 @@ function enviar(e) {
     v,
     k,
     p,
-    vPorcentaje,
-    pPorcentaje,
-    kPorcentaje,
   });
 }
 
