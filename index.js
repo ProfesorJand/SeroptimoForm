@@ -1,16 +1,16 @@
 const emailRemitente = 'seroptimo.salud@gmail.com';
 
-async function llamadaAPI() {
+const llamadaApi = async function llamadaAPI() {
   const url = 'https://backend-profesorjand.onrender.com/seroptimo';
   try {
     return await fetch(url)
       .then((res) => res.json())
-      .then((data) => data.email);
+      .then((data) => data);
   } catch (error) {
     console.log(error);
   }
   return;
-}
+};
 
 const grafico = {
   total: null,
@@ -60,10 +60,12 @@ function enviar(e) {
   }
   const elementoParrafoResultado = document.getElementById('parrafoResultado');
   let textoParrafoResultado;
+
   if (v.total >= 9 && p.total >= 9 && k.total >= 9) {
     // tridosha
     resultadoDosha = 'TRIDOSHA';
-    urlPaypalDosha = 'URLTRIDOSHA';
+    urlPaypalDosha =
+      'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y9E6FD7D5GQWG';
     (urlGratisDosha = urlBase + 'Tridosha_Inicial.pdf'), '_blank', 'noopener';
     // window.open(urlGratisDosha)
   } else if (
@@ -72,7 +74,8 @@ function enviar(e) {
   ) {
     // Vata - Pitta
     resultadoDosha = 'VATA_PITTA';
-    urlPaypalDosha = 'URL Vata - Pitta';
+    urlPaypalDosha =
+      'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YJAURZSHQRR5L';
     (urlGratisDosha = urlBase + 'Vata_Pitta_Inicial.pdf'), '_blank', 'noopener';
     // window.open(urlGratisDosha)
   } else if (
@@ -81,7 +84,8 @@ function enviar(e) {
   ) {
     // Vata - Kapha
     resultadoDosha = 'VATA_KAPHA';
-    urlPaypalDosha = 'URL Vata - Kapha';
+    urlPaypalDosha =
+      'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BU744MRJJ6GU4';
     (urlGratisDosha = urlBase + 'Vata_Kapha_Inicial.pdf'), '_blank', 'noopener';
     // window.open(urlGratisDosha)
   } else if (
@@ -90,7 +94,8 @@ function enviar(e) {
   ) {
     // Pitta - Kapha
     resultadoDosha = 'PITTA_KAPHA';
-    urlPaypalDosha = 'URL Pitta - Kapha';
+    urlPaypalDosha =
+      'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GBKLE4B85GUNE';
     (urlGratisDosha = urlBase + 'Pitta_Kapha_Inicial.pdf'),
       '_blank',
       'noopener';
@@ -98,19 +103,22 @@ function enviar(e) {
   } else if (v.total > p.total && v.total > k.total) {
     //Vata
     resultadoDosha = 'VATA';
-    urlPaypalDosha = 'URL Vata';
+    urlPaypalDosha =
+      'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XJC8VUSHPD2PS';
     (urlGratisDosha = urlBase + 'Vata_Inicial.pdf'), '_blank', 'noopener';
     // window.open(urlGratisDosha)
   } else if (p.total > v.total && p.total > k.total) {
     //Pitta
     resultadoDosha = 'PITTA';
-    urlPaypalDosha = 'URL Pitta';
+    urlPaypalDosha =
+      'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R3PUP33ADCJX4';
     (urlGratisDosha = urlBase + 'Pitta_Inicial.pdf'), '_blank', 'noopener';
     // window.open(urlGratisDosha)
   } else {
     //Kapha
     resultadoDosha = 'KAPHA';
-    urlPaypalDosha = 'URL Kapha';
+    urlPaypalDosha =
+      'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E3YZB2C7UTZXU';
     (urlGratisDosha = urlBase + 'Kapha_Inicial.pdf'), '_blank', 'noopener';
     // window.open(urlGratisDosha)
   }
@@ -354,19 +362,21 @@ function llenarDatosTabla({ v, p, k }) {
 }
 
 async function enviarCorreo(variables) {
-  const idEmail = await llamadaAPI();
-  emailjs.send(idEmail.SERVICE_ID, idEmail.TEMPLATE_ID, variables).then(
-    (response) => {
-      console.log(
-        'SUCCESS!',
-        response.status,
-        response.text,
-        'variables: ',
-        variables
-      );
-    },
-    (error) => {
-      console.log('FAILED...', error, 'variables: ', variables);
-    }
-  );
+  const dataApi = await llamadaAPI();
+  emailjs
+    .send(dataApi.email.SERVICE_ID, dataApi.email.TEMPLATE_ID, variables)
+    .then(
+      (response) => {
+        console.log(
+          'SUCCESS!',
+          response.status,
+          response.text,
+          'variables: ',
+          variables
+        );
+      },
+      (error) => {
+        console.log('FAILED...', error, 'variables: ', variables);
+      }
+    );
 }
