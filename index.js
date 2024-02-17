@@ -1,8 +1,16 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const TEMPLATE_ID = urlParams.get('template');
-const SERVICE_ID = urlParams.get('service');
 const emailRemitente = 'seroptimo.salud@gmail.com';
+
+async function llamadaAPI() {
+  const url = 'https://backend-profesorjand.onrender.com/seroptimo';
+  try {
+    return await fetch(url)
+      .then((res) => res.json())
+      .then((data) => data.email);
+  } catch (error) {
+    console.log(error);
+  }
+  return;
+}
 
 const grafico = {
   total: null,
@@ -126,9 +134,9 @@ function enviar(e) {
     v,
     k,
     p,
-    vPorcentaje: v.total / 35,
-    pPorcentaje: p.total / 35,
-    kPorcentaje: k.total / 35,
+    vPorcentaje,
+    pPorcentaje,
+    kPorcentaje,
   });
 }
 
@@ -310,7 +318,7 @@ function draw({ v, p, k }, resultadoDosha) {
     },
     animation,
   });
-  grafico.emocional = new Chart(ctxE, {
+  const dataGraficoEmocional = {
     type: 'radar',
     data: { ...data, datasets: dataEmocional },
     options: {
@@ -321,7 +329,9 @@ function draw({ v, p, k }, resultadoDosha) {
       },
     },
     animation,
-  });
+  };
+
+  grafico.emocional = new Chart(ctxE, dataGraficoEmocional);
 }
 
 function llenarDatosTabla({ v, p, k }) {
@@ -346,8 +356,9 @@ function llenarDatosTabla({ v, p, k }) {
   document.getElementById('emocionalKapha').innerHTML = k.emocional;
 }
 
-function enviarCorreo(variables) {
-  emailjs.send(SERVICE_ID, TEMPLATE_ID, variables).then(
+async function enviarCorreo(variables) {
+  const idEmail = await llamadaAPI();
+  emailjs.send(idEmail.SERVICE_ID, idEmail.TEMPLATE_ID, variables).then(
     (response) => {
       console.log(
         'SUCCESS!',
