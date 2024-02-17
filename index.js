@@ -1,6 +1,6 @@
 const emailRemitente = 'seroptimo.salud@gmail.com';
 
-const llamadaApi = async function llamadaAPI() {
+async function llamadaAPI() {
   const url = 'https://backend-profesorjand.onrender.com/seroptimo';
   try {
     return await fetch(url)
@@ -10,7 +10,7 @@ const llamadaApi = async function llamadaAPI() {
     console.log(error);
   }
   return;
-};
+}
 
 const grafico = {
   total: null,
