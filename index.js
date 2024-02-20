@@ -47,7 +47,6 @@ function enviar(e) {
   document.getElementById('btnReiniciar').disabled = false;
 
   const emailReceptor = document.getElementsByName('correo')[0].value;
-  console.log('emailReceptor', emailReceptor);
   const urlBase = 'https://guiadeparche.com/ser-optimo/';
   const nombre = document.getElementById('nombre').value;
   let v = { total: 0, fisica: 0, ambiente: 0, mental: 0, emocional: 0 };
@@ -390,16 +389,16 @@ async function enviarCorreo(variables) {
     .send(dataApi.email.SERVICE_ID, dataApi.email.TEMPLATE_ID, variables)
     .then(
       (response) => {
-        console.log(
-          'SUCCESS!',
-          response.status,
-          response.text,
-          'variables: ',
-          variables
-        );
+        // console.log(
+        //   'SUCCESS!',
+        //   response.status,
+        //   response.text,
+        //   'variables: ',
+        //   variables
+        // );
       },
       (error) => {
-        console.log('FAILED...', error, 'variables: ', variables);
+        // console.log('FAILED...', error, 'variables: ', variables);
       }
     );
 }
