@@ -19,8 +19,16 @@ const grafico = {
   mental: null,
   emocional: null,
 };
+
+function reiniciar() {
+  document.getElementById('btnEnviar').disabled = false;
+  document.getElementById('btnReiniciar').disabled = true;
+}
 function enviar(e) {
   e.preventDefault();
+  document.getElementById('btnEnviar').disabled = true;
+  document.getElementById('btnReiniciar').disabled = false;
+
   const emailReceptor = document.getElementsByName('correo')[0].value;
   console.log('emailReceptor', emailReceptor);
   const urlBase = 'https://guiadeparche.com/ser-optimo/';
