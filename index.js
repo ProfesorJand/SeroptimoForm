@@ -21,8 +21,25 @@ const grafico = {
 };
 
 function reiniciar() {
-  document.getElementById('btnEnviar').disabled = false;
-  document.getElementById('btnReiniciar').disabled = true;
+  if (confirm('Seguro que quieres reiniciar el formulario?')) {
+    document.getElementById('btnEnviar').disabled = false;
+    document.getElementById('btnReiniciar').disabled = true;
+    const containerResults =
+      document.getElementsByClassName('ContainerResults');
+    const containerGraficos =
+      document.getElementsByClassName('ContainerGraficos');
+    const containerTabla = document.getElementById('tablaResultados');
+    const containerPDF = document.getElementById('ContainerPDF');
+    containerResults[0].classList.remove('show');
+    containerGraficos[0].classList.remove('show');
+    containerTabla.classList.remove('show');
+    containerPDF.classList.remove('show');
+    containerResults[0].classList.add('hide');
+    containerGraficos[0].classList.add('hide');
+    containerTabla.classList.add('hide');
+    containerPDF.classList.add('hide');
+    document.getElementById('form').reset();
+  }
 }
 function enviar(e) {
   e.preventDefault();
@@ -348,8 +365,6 @@ function draw({ v, p, k }, resultadoDosha) {
 }
 
 function llenarDatosTabla({ v, p, k }) {
-  const tablaResultados = document.getElementById('tablaResultados');
-  tablaResultados.classList = 'showTable';
   document.getElementById('totalVata').innerHTML = v.total;
   document.getElementById('fisicoVata').innerHTML = v.fisica;
   document.getElementById('ambienteVata').innerHTML = v.ambiente;
