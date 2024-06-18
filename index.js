@@ -149,13 +149,15 @@ function enviar(e) {
   textoParrafoResultado = `Felicidades ${nombre} tu resultado final es: ${resultadoDosha}. Abajo tendras un detalle inicial de tu "Constitución Dosha" si deseas un detalle más avanzado ve a este enlace <a href="${urlPaypalDosha}" target="_blank">${resultadoDosha} - AVANZADO</a>`;
   elementoParrafoResultado.innerHTML = textoParrafoResultado;
   const containerPDF = document.getElementById('ContainerPDF');
-  containerPDF.classList = 'show';
+  containerPDF.classList.add("show");
   const objectPDF = document.getElementById('objectPDF');
   objectPDF.data = urlGratisDosha;
   const anchorDoshaGratis = document.getElementById('anchorDoshaGratis');
   anchorDoshaGratis.href = urlGratisDosha;
-  draw({ v, p, k }, resultadoDosha);
-  llenarDatosTabla({ v, p, k });
+  //draw({ v, p, k }, resultadoDosha);
+  //llenarDatosTabla({ v, p, k });
+  const top = containerPDF.getBoundingClientRect().top + window.scrollY -20;
+  window.scroll({top,behavior:"smooth"});
   enviarCorreo({
     nombre,
     emailReceptor,
