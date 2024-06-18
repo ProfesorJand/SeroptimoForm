@@ -85,7 +85,7 @@ function enviar(e) {
   const elementoParrafoResultado = document.getElementById('parrafoResultado');
   let textoParrafoResultado;
 
-  if (v.total >= 9 && p.total >= 9 && k.total >= 9) {
+  if (v.total >= 10 && p.total >= 10 && k.total >= 10) {
     // tridosha
     resultadoDosha = 'TRIDOSHA';
     urlPaypalDosha =
@@ -154,8 +154,8 @@ function enviar(e) {
   objectPDF.data = urlGratisDosha;
   const anchorDoshaGratis = document.getElementById('anchorDoshaGratis');
   anchorDoshaGratis.href = urlGratisDosha;
-  //draw({ v, p, k }, resultadoDosha);
-  //llenarDatosTabla({ v, p, k });
+  draw({ v, p, k }, resultadoDosha);
+  llenarDatosTabla({ v, p, k });
   const top = containerPDF.getBoundingClientRect().top + window.scrollY -20;
   window.scroll({top,behavior:"smooth"});
   enviarCorreo({
